@@ -7,18 +7,17 @@
     <style>body{font-family: monospace;}</style>
 </head>
 <body>
-    <p></p>
 </body>
 <script>
-    const p = document.querySelector("p");let s = 0;
-    while (true){
-    s = parseInt(prompt("Masukkan angka positif tanpa koma"));
-    if((s+1)%4 == 0) break;}
-    let result = "";
+    let s = 0;
+    while (true) {
+    s = parseInt(prompt("Masukkan angka positif tanpa koma atau titik"));
+    if((s+1)%4 == 0) break;
+    }
     function addText(recText) {let txt = ""; for(j = 0; j<(s-2);j++) {txt += recText;} return txt;}
     var text = [
-        '@ ' + addText("@"),
-        '@' + addText("&nbsp;") + "@" ,
+        "@ " + addText("@"),
+        "@" + addText("&nbsp;") + "@" ,
         addText("@") + " @"
     ];
     for (i = 1; i <= s; i++) {
