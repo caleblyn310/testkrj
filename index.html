@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body{font-family: monospace;}</style>
+</head>
+<body>
+    <p></p>
+</body>
+<script>
+    const p = document.querySelector("p");let s = 0;
+    while (true){
+    s = parseInt(prompt("Masukkan angka positif tanpa koma"));
+    if((s+1)%4 == 0) break;}
+    let result = "";
+    function addText(recText) {let txt = ""; for(j = 0; j<(s-2);j++) {txt += recText;} return txt;}
+    var text = [
+        '@ ' + addText("@"),
+        '@' + addText("&nbsp;") + "@" ,
+        addText("@") + " @"
+    ];
+    for (i = 1; i <= s; i++) {
+        if(i % 2 == 0) {
+            document.write(text[1]+"<br>");
+        }
+        else if((i+3)%4 == 0) {
+            document.write(text[0]+"<br>");
+        }
+        else {
+            document.write(text[2]+"<br>");
+        }
+    }
+</script>
+</html>
